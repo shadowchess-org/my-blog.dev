@@ -54,6 +54,12 @@ corepack enable pnpm
 # Verify pnpm version:
 pnpm -v
 
+# Download and install Yarn:
+corepack enable yarn
+
+# Verify Yarn version:
+yarn -v
+
 ```
 
 ## Docker
@@ -115,3 +121,30 @@ git pull https://github.com/shadowchess-org/my-blog.dev.git
 pnpm build
 ```
 
+## ffmpeg
+
+```
+sudo apt update && sudo apt upgrade
+sudo apt install ffmpeg
+ffmpeg -version
+```
+
+## Python
+
+```
+sudo apt update -y
+sudo apt install software-properties-common -y
+
+sudo apt install python3.13
+
+python3.13 --version
+
+sudo apt install python3-pip
+pip --version
+pip list
+
+which python3.13
+alias python="/usr/bin/python3.13"
+python3.13 -V
+python -V
+```
