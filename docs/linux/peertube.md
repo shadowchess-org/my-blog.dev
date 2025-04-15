@@ -152,3 +152,38 @@ sudo -u peertube cp peertube-latest/config/production.yaml.example config/produc
 
 Затем отредактируйте `config/production.yaml` файл в соответствии с конфигурацией вашего веб-сервера и базы данных. В частности:
 
+webserver: Публичная информация об обратном прокси-сервере
+secrets: Секретные строки, которые необходимо сгенерировать вручную (версия PeerTube >= 5.0)
+database: Настройки PostgreSQL
+redis: Настройки Redis
+smtp: Если вы хотите использовать электронную почту
+admin.email: Правильно заполнить root адрес электронной почты пользователя
+Ключи, определенные в , config/production.yaml переопределяют ключи, определенные в config/default.yaml.
+
+PeerTube не поддерживает смену хоста веб-сервера .
+
+
+systemd
+Если ваша ОС использует systemd, скопируйте шаблон конфигурации:
+
+
+sudo cp /var/www/peertube/peertube-latest/support/systemd/peertube.service /etc/systemd/system/
+
+Check the service file (PeerTube paths and security directives):
+
+
+sudo vim  /etc/systemd/system/peertube.service
+
+Сообщите systemd о необходимости перезагрузить конфигурацию:
+
+sudo systemctl daemon-reload
+
+Если вы хотите запустить PeerTube при загрузке:
+
+sudo systemctl enable peertube
+
+Run:
+
+
+sudo systemctl start peertube
+sudo journalctl -feu peertube
