@@ -38,7 +38,12 @@ rustup update
 ```
 curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 sudo apt install -y nodejs
+
+node -v
 which node
+
+npm install --global yarn
+npm install -g pnpm@latest-10
 ```
 
 ```
@@ -141,6 +146,17 @@ ffmpeg -version
 ```
 sudo apt update -y
 sudo apt install software-properties-common -y
+
+
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update -y
+sudo apt install python3.13-full
+python3.13 --version
+
+python3.13 -m ensurepip --upgrade
+python3.13 -m pip --version
+python3.13 -m pip install --upgrade pip
+
 
 sudo apt install python3.13
 

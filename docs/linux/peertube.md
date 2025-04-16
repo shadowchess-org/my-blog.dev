@@ -117,11 +117,12 @@ sudo -u peertube chmod 750 config/
 
 Загрузите последнюю версию клиента Peertube, распакуйте ее и удалите zip-архив:
 
-
+```
 cd /var/www/peertube/versions
 # Releases are also available on https://builds.joinpeertube.org/release
 sudo -u peertube wget -q "https://github.com/Chocobozzz/PeerTube/releases/download/${VERSION}/peertube-${VERSION}.zip"
 sudo -u peertube unzip -q peertube-${VERSION}.zip && sudo -u peertube rm peertube-${VERSION}.zip
+```
 
 Установить Peertube:
 
@@ -130,8 +131,7 @@ cd /var/www/peertube
 sudo -u peertube ln -s versions/peertube-${VERSION} ./peertube-latest
 
 cd ./peertube-latest
-//sudo -H -u peertube npm run install-node-dependencies -- --production
-npm run install-node-dependencies -- --production
+sudo -H -u peertube npm run install-node-dependencies -- --production
 
 ```
 
@@ -186,4 +186,9 @@ Run:
 
 
 sudo systemctl start peertube
+
+sudo systemctl status peertube
+
 sudo journalctl -feu peertube
+
+cd /var/www/peertube/peertube-latest && NODE_CONFIG_DIR=/var/www/peertube/config NODE_ENV=production npm run reset-password -- -u root
