@@ -1,0 +1,7 @@
+lavren94kz
+
+
+my-blog.dev, www.my-blog.dev {
+  root * /var/www/sites/my-blog.dev/build
+  file_server
+}

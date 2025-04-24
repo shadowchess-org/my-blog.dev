@@ -30,7 +30,7 @@ sudo apt install caddy
 
 ```
 caddy version
-v2.9.1 h1:q3pe0wpBj1OcHFZ3n/1nl4V4bxBrYoSoab7rL9BMYNk=
+v2.10.0 h1:fonubSaQKF1YANl8TXqGcn4IbIRUDdfAkpcsfI/vX5U=
 
 /etc/caddy/Caddyfile
 
