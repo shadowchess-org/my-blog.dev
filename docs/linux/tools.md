@@ -158,11 +158,10 @@ python3.13 -m pip --version
 python3.13 -m pip install --upgrade pip
 
 
-sudo apt install python3.13
+// sudo apt install python3.13
+// python3.13 --version
+// sudo apt install python3-pip
 
-python3.13 --version
-
-sudo apt install python3-pip
 pip --version
 pip list
 

@@ -166,25 +166,31 @@ PeerTube не поддерживает смену хоста веб-сервер
 systemd
 Если ваша ОС использует systemd, скопируйте шаблон конфигурации:
 
-
+```
 sudo cp /var/www/peertube/peertube-latest/support/systemd/peertube.service /etc/systemd/system/
+```
 
 Check the service file (PeerTube paths and security directives):
 
-
+```
 sudo vim  /etc/systemd/system/peertube.service
+```
 
 Сообщите systemd о необходимости перезагрузить конфигурацию:
 
+```
 sudo systemctl daemon-reload
+```
 
 Если вы хотите запустить PeerTube при загрузке:
 
+```
 sudo systemctl enable peertube
+```
 
 Run:
 
-
+```
 sudo systemctl start peertube
 
 sudo systemctl status peertube
@@ -192,3 +198,4 @@ sudo systemctl status peertube
 sudo journalctl -feu peertube
 
 cd /var/www/peertube/peertube-latest && NODE_CONFIG_DIR=/var/www/peertube/config NODE_ENV=production npm run reset-password -- -u root
+```
