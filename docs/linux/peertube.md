@@ -87,7 +87,7 @@ cd /var/www/peertube
 sudo -u postgres createuser -P peertube
 ```
 
-Здесь вы должны ввести пароль для peertubeпользователя PostgreSQL, который должен быть скопирован в production.yaml файл. Не нажимайте просто Enter, иначе он будет пустым.
+Здесь вы должны ввести пароль для `peertube` пользователя `PostgreSQL`, который должен быть скопирован в `production.yaml` файл. Не нажимайте просто `Enter`, иначе он будет пустым.
 
 
 `sudo -u postgres createdb -O peertube -E UTF8 -T template0 peertube_prod`

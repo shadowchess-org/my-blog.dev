@@ -29,9 +29,9 @@ info: Creating home directory `/home/git' ...
 
 `groups git`
 
-`mkdir ~/forgejo`
+`mkdir /var/www/forgejo`
 
-`cd ~/forgejo`
+`cd /var/www/forgejo`
 
 docker-compose.yml
 
