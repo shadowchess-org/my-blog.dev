@@ -44,6 +44,9 @@ which node
 
 npm install --global yarn
 npm install -g pnpm@latest-10
+
+yarn -v
+pnpm -v
 ```
 
 ```
